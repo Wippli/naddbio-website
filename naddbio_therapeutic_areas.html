@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Areas - NADDBio Expertise</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="NADDBio expertise spans oncology, immunology, neurology, rare diseases, and infectious diseases. Deep therapeutic knowledge for successful drug development.">
+    <meta name="keywords" content="therapeutic areas, oncology consulting, immunology, neurology, rare diseases, infectious diseases, drug development">
+    <link rel="canonical" href="https://www.naddbio.com/therapeutic-areas">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.naddbio.com/therapeutic-areas">
+    <meta property="og:title" content="Therapeutic Areas - NADDBio Expertise">
+    <meta property="og:description" content="Deep therapeutic expertise in oncology, immunology, neurology, and rare diseases.">
+    <meta property="og:image" content="https://www.naddbio.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Mobile Device Detection & Redirect -->
+    <script>
+        (function() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                || (window.innerWidth <= 768);
+            if (isMobile && window.location.pathname.indexOf('_mobile') === -1) {
+                var mobilePage = window.location.pathname.replace('.html', '_mobile.html');
+                window.location.replace(mobilePage);
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e62a0;
+            --gradient-start: #31b44a;
+            --gradient-end: #8abe40;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-text: #1a1a2e;
+            --body-text: #4a5568;
+            --gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--body-text);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant', serif;
+            color: var(--dark-text);
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            height: var(--header-height);
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--body-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-blue);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 101;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 3px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(49, 180, 74, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(49, 180, 74, 0.4);
+        }
+
+        .btn-orange {
+            background: #f7941d;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.3);
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4);
+            background: #e8850a;
+        }
+
+        /* ========================================
+           HERO - Full Video with Overlay Panel
+        ======================================== */
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        /* Video Background - Full Width */
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @keyframes heroFade {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Content Panel - Right Side */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 580px;
+            text-align: left;
+            padding: 60px 50px;
+            margin-right: 8%;
+            background: rgba(255,255,255,0.8);
+            opacity: 0;
+            animation: heroFade 1.5s ease-out 0.5s forwards;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            line-height: 1.15;
+        }
+
+        .hero p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            line-height: 1.75;
+            color: var(--body-text);
+        }
+
+        .hero p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           SCROLL SNAP CONTAINER
+        ======================================== */
+        .page-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .page-container > section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        /* ========================================
+           THERAPEUTIC AREAS INTERACTIVE PAGE
+        ======================================== */
+        .therapeutic-explorer {
+            min-height: 100vh;
+            display: flex;
+            background: var(--light-gray);
+        }
+
+        .areas-sidebar {
+            width: 40%;
+            background: var(--white);
+            padding: 120px 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .areas-sidebar h2 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin-bottom: 32px;
+        }
+
+        .area-item {
+            padding: 16px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--body-text);
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .area-item:hover {
+            color: var(--primary-blue);
+            background: rgba(30, 98, 160, 0.05);
+            border-left-color: var(--gradient-start);
+        }
+
+        .area-item.active {
+            color: var(--primary-blue);
+            background: rgba(30, 98, 160, 0.08);
+            border-left: 3px solid;
+            border-image: var(--gradient) 1;
+            font-weight: 600;
+        }
+
+        .area-item::after {
+            content: '→';
+            position: absolute;
+            right: 24px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .area-item:hover::after,
+        .area-item.active::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .area-content {
+            width: 60%;
+            padding: 120px 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .area-detail {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .area-detail.active {
+            display: block;
+            animation: detailFadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes detailFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .area-detail .area-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .area-detail .area-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .area-detail h3 {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .area-detail p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--body-text);
+            margin-bottom: 16px;
+        }
+
+        .area-detail .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .area-detail .expertise-tag {
+            background: rgba(49, 180, 74, 0.1);
+            color: var(--gradient-start);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .area-placeholder {
+            text-align: center;
+            color: var(--body-text);
+        }
+
+        .area-placeholder p {
+            font-size: 18px;
+            opacity: 0.6;
+        }
+
+        /* Responsive for explorer page */
+        @media (max-width: 768px) {
+            .therapeutic-explorer {
+                flex-direction: column;
+            }
+
+            .areas-sidebar {
+                width: 100%;
+                padding: 100px 24px 40px;
+                border-right: none;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+
+            .areas-sidebar h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .area-item {
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+
+            .area-content {
+                width: 100%;
+                padding: 40px 24px;
+            }
+
+            .area-detail h3 {
+                font-size: 28px;
+            }
+
+            .area-detail p {
+                font-size: 15px;
+            }
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+        .footer {
+            background: var(--dark-text);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+            font-size: 28px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* ========================================
+           RESPONSIVE
+        ======================================== */
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
+            /* CRITICAL: Prevent horizontal scroll */
+            html, body {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+
+            html {
+                scroll-snap-type: y proximity;
+                scroll-behavior: smooth;
+            }
+
+            .page {
+                min-height: 100vh;
+                scroll-snap-align: start;
+            }
+
+            /* Hero mobile */
+            .hero {
+                flex-direction: column;
+                justify-content: flex-start;
+                min-height: 100vh;
+                overflow: hidden;
+            }
+
+            .hero-video-container {
+                position: relative;
+                width: 100%;
+                height: 35vh;
+                max-height: 250px;
+                order: 2;
+                overflow: hidden;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-content {
+                position: relative;
+                order: 1;
+                padding: 100px 24px 30px;
+                margin: 0;
+                text-align: left;
+                max-width: 100%;
+                width: 100%;
+                background: var(--white);
+                box-sizing: border-box;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav .btn-primary {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 24px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 14px 0;
+                border-bottom: 1px solid var(--light-gray);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 14px 32px;
+                font-size: 15px;
+                min-height: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo.svg" alt="NADDBio" height="40"></a>
+            <ul class="nav-links">
+                <li><a href="naddbio-about-mockup.html">About</a></li>
+                <li><a href="naddbio_services.html">Services</a></li>
+                <li><a href="naddbio_therapeutic_areas.html" class="active">Therapeutic Areas</a></li>
+                <li><a href="naddbio_leadership.html">Leadership</a></li>
+                <li><a href="naddbio_contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="naddbio_contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Scroll Snap Container -->
+    <div class="page-container">
+
+    <!-- ==========================================
+         HERO - Video Background with Content Panel
+    =========================================== -->
+    <section class="hero">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video
+                class="hero-video"
+                muted
+                loop
+                playsinline
+                preload="auto"
+            >
+                <source src="https://branniumassets.blob.core.windows.net/naddbio/Image_To_Realistic_Biotech_Lab_Video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Content Panel - Right Side -->
+        <div class="hero-content">
+            <span class="hero-badge">Therapeutic Areas</span>
+            <h1>Driving Innovation Across Therapeutic Areas</h1>
+            <p>NADDBio is dedicated to new approaches and thinking that make a lasting impact on the development of innovative treatments. We achieve this through distinctive clinical practice experience and extensive clinical development expertise with new chemical and biological entities.</p>
+            <p>We collaborate with partners utilizing cutting-edge technologies and insightful knowledge in core areas of disease biology to explore and develop medicines that drive transformational improvements in therapeutics.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         THERAPEUTIC AREAS EXPLORER - Page 2
+    =========================================== -->
+    <section class="therapeutic-explorer">
+        <!-- Left Sidebar - Clickable Areas List -->
+        <div class="areas-sidebar">
+            <h2>Explore Our Therapeutic Focus</h2>
+            <div class="area-item active" data-area="oncology">Oncology</div>
+            <div class="area-item" data-area="cardiovascular">Cardiovascular, Renal & Metabolism</div>
+            <div class="area-item" data-area="immunology">Immunology & Autoimmune Diseases</div>
+            <div class="area-item" data-area="neurosciences">Neurosciences</div>
+            <div class="area-item" data-area="infectious">Infectious Diseases</div>
+            <div class="area-item" data-area="vaccines">Vaccines</div>
+            <div class="area-item" data-area="gastroenterology">Gastroenterology</div>
+            <div class="area-item" data-area="rare">Rare Diseases</div>
+        </div>
+
+        <!-- Right Content - Area Details -->
+        <div class="area-content">
+            <!-- Oncology -->
+            <div class="area-detail active" id="oncology">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <h3>Oncology</h3>
+                <p>Our oncology expertise spans the full spectrum of cancer drug development, from early-phase trials to pivotal studies. We bring deep understanding of tumor biology, biomarker-driven strategies, and innovative trial designs that accelerate the path to approval.</p>
+                <p>We support partners in developing targeted therapies, immunotherapies, and combination approaches across solid tumors and hematological malignancies.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Solid Tumors</span>
+                    <span class="expertise-tag">Hematology</span>
+                    <span class="expertise-tag">Immuno-Oncology</span>
+                    <span class="expertise-tag">Precision Medicine</span>
+                </div>
+            </div>
+
+            <!-- Cardiovascular, Renal & Metabolism -->
+            <div class="area-detail" id="cardiovascular">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h3>Cardiovascular, Renal & Metabolism</h3>
+                <p>We provide comprehensive support for cardiovascular and cardiometabolic drug development, including heart failure, atherosclerosis, diabetes, obesity, and chronic kidney disease programs.</p>
+                <p>Our team brings expertise in outcomes trials, innovative endpoints, and regulatory strategies that address the complex interplay between cardiovascular, renal, and metabolic conditions.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Heart Failure</span>
+                    <span class="expertise-tag">Diabetes</span>
+                    <span class="expertise-tag">CKD</span>
+                    <span class="expertise-tag">Outcomes Trials</span>
+                </div>
+            </div>
+
+            <!-- Immunology & Autoimmune -->
+            <div class="area-detail" id="immunology">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <h3>Immunology & Autoimmune Diseases</h3>
+                <p>NADDBio supports the development of immunomodulatory therapies for autoimmune and inflammatory conditions, including rheumatoid arthritis, lupus, inflammatory bowel disease, and atopic dermatitis.</p>
+                <p>We understand the complexities of immune-mediated diseases and help partners design trials that demonstrate meaningful clinical benefit while managing immunosuppression risks.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Rheumatology</span>
+                    <span class="expertise-tag">Dermatology</span>
+                    <span class="expertise-tag">IBD</span>
+                    <span class="expertise-tag">Biologics</span>
+                </div>
+            </div>
+
+            <!-- Neurosciences -->
+            <div class="area-detail" id="neurosciences">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                </div>
+                <h3>Neurosciences</h3>
+                <p>Our neuroscience expertise covers CNS drug development for neurological and psychiatric conditions, including Alzheimer's disease, Parkinson's disease, multiple sclerosis, depression, and rare neurological disorders.</p>
+                <p>We navigate the unique challenges of CNS trials, from patient selection and biomarker strategies to innovative endpoint development and regulatory engagement.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Neurodegeneration</span>
+                    <span class="expertise-tag">Psychiatry</span>
+                    <span class="expertise-tag">MS</span>
+                    <span class="expertise-tag">Rare CNS</span>
+                </div>
+            </div>
+
+            <!-- Infectious Diseases -->
+            <div class="area-detail" id="infectious">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm6 11h-3v3h-2v-3H8v-2h3v-3h2v3h3v2z"/></svg>
+                </div>
+                <h3>Infectious Diseases</h3>
+                <p>NADDBio brings extensive experience in anti-infective drug development, including antibacterials, antivirals, and antifungals. We understand the regulatory pathways, trial designs, and endpoints specific to infectious disease programs.</p>
+                <p>Our expertise includes antimicrobial resistance strategies, emerging infections, and global health initiatives that address critical unmet medical needs.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Antibacterials</span>
+                    <span class="expertise-tag">Antivirals</span>
+                    <span class="expertise-tag">AMR</span>
+                    <span class="expertise-tag">Global Health</span>
+                </div>
+            </div>
+
+            <!-- Vaccines -->
+            <div class="area-detail" id="vaccines">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11 2v2.07A8.002 8.002 0 0 0 4.07 11H2v2h2.07A8.002 8.002 0 0 0 11 19.93V22h2v-2.07A8.002 8.002 0 0 0 19.93 13H22v-2h-2.07A8.002 8.002 0 0 0 13 4.07V2h-2zm1 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>
+                </div>
+                <h3>Vaccines</h3>
+                <p>We support vaccine development from preclinical through licensure, including prophylactic and therapeutic vaccines across infectious diseases and oncology indications.</p>
+                <p>Our team brings expertise in immunogenicity assessment, correlates of protection, adaptive trial designs, and the unique regulatory considerations for vaccine approval and post-marketing commitments.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Prophylactic</span>
+                    <span class="expertise-tag">Therapeutic</span>
+                    <span class="expertise-tag">mRNA Platforms</span>
+                    <span class="expertise-tag">Immunogenicity</span>
+                </div>
+            </div>
+
+            <!-- Gastroenterology -->
+            <div class="area-detail" id="gastroenterology">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/></svg>
+                </div>
+                <h3>Gastroenterology</h3>
+                <p>NADDBio supports GI drug development across inflammatory bowel disease, NASH/MASH, functional GI disorders, and liver diseases. We understand the evolving landscape of GI therapeutics and the endpoint considerations for these indications.</p>
+                <p>Our expertise includes histological endpoints, patient-reported outcomes, and the regulatory strategies needed to demonstrate meaningful benefit in GI conditions.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">IBD</span>
+                    <span class="expertise-tag">NASH/MASH</span>
+                    <span class="expertise-tag">Liver Disease</span>
+                    <span class="expertise-tag">Functional GI</span>
+                </div>
+            </div>
+
+            <!-- Rare Diseases -->
+            <div class="area-detail" id="rare">
+                <div class="area-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4s1.79-4 4-4h.71C7.37 7.69 9.48 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3z"/></svg>
+                </div>
+                <h3>Rare Diseases</h3>
+                <p>We specialize in orphan drug development, navigating the unique regulatory pathways, trial designs, and patient engagement strategies essential for rare disease programs.</p>
+                <p>Our team understands the challenges of small patient populations, natural history studies, and the importance of meaningful endpoints that capture disease burden and treatment benefit in rare conditions.</p>
+                <div class="expertise-tags">
+                    <span class="expertise-tag">Orphan Drugs</span>
+                    <span class="expertise-tag">Gene Therapy</span>
+                    <span class="expertise-tag">Natural History</span>
+                    <span class="expertise-tag">Patient Advocacy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div><!-- End Scroll Snap Container -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo-negative.svg" alt="NADDBio" height="40"></a>
+                    <p>Biopharmaceutical R&D consultancy offering strategic and operational advisory services across clinical development, pharmacovigilance, medical affairs, and regulatory functions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">R&D Consulting</a></li>
+                        <li><a href="#">Clinical Development</a></li>
+                        <li><a href="#">Regulatory Affairs</a></li>
+                        <li><a href="#">Pharmacovigilance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Therapeutic Areas</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Cambridge, Massachusetts, USA</li>
+                        <li>UK & EU Eligible</li>
+                        <li><a href="tel:+16174078015">+1 617 407 8015</a></li>
+                        <li><a href="mailto:info@naddbio.com">info@naddbio.com</a></li>
+                        <li><a href="https://www.linkedin.com/company/naddbio" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved. | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animation Script -->
+    <script>
+        (function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Video control - start when page loads, 10% slower
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                video.playbackRate = 0.9;
+                video.play().catch(function(error) {
+                    console.log('Autoplay prevented:', error);
+                });
+            }
+
+            // Therapeutic Areas Interactive Click Handler
+            const areaItems = document.querySelectorAll('.area-item');
+            const areaDetails = document.querySelectorAll('.area-detail');
+
+            areaItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetArea = this.getAttribute('data-area');
+
+                    // Remove active class from all items
+                    areaItems.forEach(i => i.classList.remove('active'));
+                    areaDetails.forEach(d => d.classList.remove('active'));
+
+                    // Add active class to clicked item
+                    this.classList.add('active');
+
+                    // Show corresponding detail
+                    const targetDetail = document.getElementById(targetArea);
+                    if (targetDetail) {
+                        targetDetail.classList.add('active');
+                    }
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

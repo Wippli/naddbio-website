@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact NADDBio - Get in Touch</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact NADDBio for biopharmaceutical consulting inquiries. Reach our team in Cambridge, MA for drug development, regulatory, and clinical operations support.">
+    <meta name="keywords" content="contact NADDBio, biopharmaceutical consulting contact, drug development inquiry, Cambridge MA pharmaceutical, consulting inquiry">
+    <meta name="author" content="NADDBio">
+    <link rel="canonical" href="https://www.naddbio.com/contact">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.naddbio.com/contact">
+    <meta property="og:title" content="Contact NADDBio - Get in Touch">
+    <meta property="og:description" content="Reach our team for biopharmaceutical consulting inquiries. Drug development, regulatory, and clinical operations support.">
+    <meta property="og:image" content="https://www.naddbio.com/og-image.png">
+    <meta property="og:site_name" content="NADDBio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.naddbio.com/contact">
+    <meta name="twitter:title" content="Contact NADDBio - Get in Touch">
+    <meta name="twitter:description" content="Reach our team for biopharmaceutical consulting inquiries. Drug development, regulatory, and clinical operations support.">
+    <meta name="twitter:image" content="https://www.naddbio.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e62a0;
+            --gradient-start: #31b44a;
+            --gradient-end: #8abe40;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-text: #1a1a2e;
+            --body-text: #4a5568;
+            --gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            --header-height: 56px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; }
+        html, body { overflow-x: hidden; max-width: 100vw; -webkit-text-size-adjust: 100%; }
+        body { font-family: 'Work Sans', sans-serif; font-size: 17px; line-height: 1.6; color: var(--body-text); background: var(--white); }
+        h1, h2, h3, h4 { font-family: 'Cormorant', serif; color: var(--dark-text); line-height: 1.25; }
+
+        /* Navigation */
+        .nav { background: var(--white); position: fixed; width: 100%; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.1); height: var(--header-height); display: flex; align-items: center; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 16px; }
+        .logo img { height: 32px; padding-top: 5px; }
+        .mobile-menu-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 12px; min-width: 48px; min-height: 48px; justify-content: center; align-items: center; }
+        .mobile-menu-toggle span { width: 22px; height: 2px; background: var(--primary-blue); border-radius: 2px; transition: all 0.3s; }
+        .mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .nav-links { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; background: var(--white); flex-direction: column; padding: 8px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); list-style: none; }
+        .nav-links.active { display: flex; }
+        .nav-links li { border-bottom: 1px solid var(--light-gray); }
+        .nav-links li:last-child { border-bottom: none; }
+        .nav-links a { display: block; padding: 16px 24px; font-size: 17px; font-weight: 500; color: var(--body-text); text-decoration: none; min-height: 48px; }
+        .nav-links a.active { color: var(--primary-blue); }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; font-family: 'Work Sans', sans-serif; font-size: 17px; font-weight: 600; text-decoration: none; border-radius: 8px; min-height: 48px; text-align: center; }
+        .btn-primary { background: var(--gradient); color: var(--white); }
+        .btn-orange { background: #f7941d; color: var(--white); }
+
+        /* Hero Section - 100dvh with gradient background */
+        .hero { height: 100vh; height: 100dvh; padding-top: var(--header-height); display: flex; flex-direction: column; overflow: hidden; }
+        .hero-graphic { height: 27vh; min-height: 160px; width: 100%; overflow: hidden; background: linear-gradient(135deg, var(--primary-blue) 0%, #1a4d7c 100%); flex-shrink: 0; display: flex; align-items: center; justify-content: center; position: relative; padding: 16px 24px; }
+        .hero-graphic::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='20' cy='30' r='2' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='80' cy='20' r='3' fill='rgba(255,255,255,0.08)'/%3E%3Ccircle cx='50' cy='70' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='70' cy='50' r='1.5' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='30' cy='80' r='2' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E"); opacity: 0.5; }
+        /* Dashboard Preview */
+        .dash-preview { background: rgba(255,255,255,0.95); border-radius: 10px; padding: 10px 14px; width: 70%; max-height: 99%; aspect-ratio: 16/9; box-shadow: 0 8px 30px rgba(0,0,0,0.2); z-index: 10; display: flex; flex-direction: column; justify-content: center; }
+        .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
+        .dash-logo { font-family: 'Cormorant', serif; font-size: 16px; font-weight: 700; color: var(--primary-blue); }
+        .dash-logo span { color: var(--gradient-start); }
+        .dash-badge { font-size: 9px; background: var(--gradient); color: white; padding: 3px 8px; border-radius: 10px; font-weight: 600; }
+        .dash-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .dash-metric { text-align: center; padding: 6px 8px; background: var(--light-gray); border-radius: 6px; }
+        .dash-metric-value { font-family: 'Cormorant', serif; font-size: 18px; font-weight: 700; color: var(--primary-blue); }
+        .dash-metric-label { font-size: 8px; color: var(--body-text); text-transform: uppercase; letter-spacing: 0.3px; }
+        .hero-content { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 24px 24px 20px; text-align: center; background: var(--white); }
+        .hero-text { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .hero-badge { display: inline-block; background: var(--gradient); color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+        .hero h1 { font-size: 26px; font-weight: 600; margin-bottom: 14px; color: var(--primary-blue); }
+        .hero p { font-size: 15px; line-height: 1.55; color: var(--body-text); margin-bottom: 20px; }
+        .hero-cta { display: flex; flex-direction: column; gap: 12px; padding-bottom: 16px; }
+        .hero-cta .btn { width: 100%; }
+
+        /* Sections */
+        .section { padding: 40px 24px; }
+        .section-header { text-align: center; margin-bottom: 24px; }
+        .section-header h2 { font-size: 26px; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue); }
+        .section-header p { font-size: 16px; line-height: 1.55; }
+        .section.alt { background: var(--light-gray); }
+        .section.blue { background: var(--primary-blue); color: var(--white); }
+        .section.blue .section-header h2 { color: var(--white); }
+        .section.blue .section-header p { color: rgba(255,255,255,0.9); }
+
+        /* Contact Info */
+        .contact-details { list-style: none; margin-bottom: 24px; }
+        .contact-details li { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--light-gray); }
+        .contact-details li:last-child { border-bottom: none; }
+        .contact-icon { width: 44px; height: 44px; background: var(--gradient); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .contact-icon svg { width: 22px; height: 22px; fill: white; }
+        .contact-text { flex: 1; }
+        .contact-text strong { display: block; font-size: 14px; color: var(--dark-text); margin-bottom: 4px; }
+        .contact-text a, .contact-text span { font-size: 15px; color: var(--body-text); text-decoration: none; }
+
+        /* Contact Form */
+        .contact-form-wrapper { background: var(--white); padding: 24px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .contact-form-wrapper h3 { font-size: 22px; color: var(--primary-blue); margin-bottom: 20px; text-align: center; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 500; color: var(--dark-text); margin-bottom: 6px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; font-family: 'Work Sans', sans-serif; font-size: 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: var(--white); color: var(--dark-text); transition: border-color 0.3s; -webkit-appearance: none; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--gradient-start); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .consent-group { margin-top: 8px; }
+        .consent-label { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--body-text); cursor: pointer; line-height: 1.4; }
+        .consent-label input[type="checkbox"] { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--gradient-start); cursor: pointer; flex-shrink: 0; }
+        .submit-btn { width: 100%; padding: 16px; background: var(--gradient); color: white; border: none; border-radius: 8px; font-family: 'Work Sans', sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; min-height: 48px; }
+
+        /* Feature Cards */
+        .features-grid { display: flex; flex-direction: column; gap: 16px; }
+        .feature-card { background: var(--white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--gradient-start); }
+        .feature-card h3 { font-size: 18px; color: var(--primary-blue); margin-bottom: 8px; }
+        .feature-card p { font-size: 15px; line-height: 1.55; }
+
+        /* Who List */
+        .who-list { list-style: none; }
+        .who-list li { padding: 14px 0; font-size: 15px; color: var(--body-text); border-bottom: 1px solid rgba(255,255,255,0.2); padding-left: 32px; position: relative; }
+        .who-list li:last-child { border-bottom: none; }
+        .who-list li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; background: var(--gradient); border-radius: 50%; }
+        .who-list li::after { content: ''; position: absolute; left: 7px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; background: white; border-radius: 50%; }
+
+        /* How Steps */
+        .how-steps { counter-reset: step; }
+        .how-step { padding: 16px 0 16px 50px; position: relative; border-left: 2px solid var(--gradient-start); margin-left: 16px; }
+        .how-step:last-child { border-left-color: transparent; }
+        .how-step::before { counter-increment: step; content: counter(step); position: absolute; left: -17px; top: 16px; width: 32px; height: 32px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 14px; }
+        .how-step h4 { font-family: 'Work Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; }
+        .how-step p { font-size: 14px; color: var(--body-text); line-height: 1.5; }
+
+        /* CTA */
+        .cta { background: var(--light-gray); text-align: center; }
+        .cta h2 { font-size: 24px; font-weight: 600; color: var(--dark-text); margin-bottom: 12px; }
+        .cta > p { font-size: 16px; margin-bottom: 24px; color: var(--body-text); }
+        .cta-buttons { display: flex; flex-direction: column; gap: 12px; }
+        .cta-buttons .btn { width: 100%; }
+
+        /* Footer */
+        .footer { background: var(--dark-text); color: rgba(255,255,255,0.8); padding: 36px 24px 24px; }
+        .footer-brand { margin-bottom: 28px; }
+        .footer-brand .logo img { height: 28px; margin-bottom: 12px; }
+        .footer-brand p { font-size: 15px; line-height: 1.6; }
+        .footer-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px; }
+        .footer h4 { color: var(--white); font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 8px; }
+        .footer a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo.svg" alt="NADDBio"></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links">
+                <li><a href="naddbio-about-mockup.html">About</a></li>
+                <li><a href="naddbio_services.html">Services</a></li>
+                <li><a href="naddbio_therapeutic_areas.html">Therapeutic Areas</a></li>
+                <li><a href="naddbio_leadership.html">Leadership</a></li>
+                <li><a href="naddbio_contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-graphic">
+            <div class="dash-preview">
+                <div class="dash-header">
+                    <div class="dash-logo">NADD<span>bio</span></div>
+                    <span class="dash-badge">R&D Intelligence</span>
+                </div>
+                <div class="dash-metrics">
+                    <div class="dash-metric">
+                        <div class="dash-metric-value">$85B</div>
+                        <div class="dash-metric-label">Market TAM</div>
+                    </div>
+                    <div class="dash-metric">
+                        <div class="dash-metric-value">8.5%</div>
+                        <div class="dash-metric-label">CAGR</div>
+                    </div>
+                    <div class="dash-metric">
+                        <div class="dash-metric-value">12%</div>
+                        <div class="dash-metric-label">Phase I PoS</div>
+                    </div>
+                    <div class="dash-metric">
+                        <div class="dash-metric-value">$2.5M</div>
+                        <div class="dash-metric-label">IND Budget</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Get in Touch</span>
+                <h1>Let's Discuss Your Drug Development Needs</h1>
+                <p>Ready to accelerate your R&D? Contact us for consulting, regulatory guidance, or AI-powered R&D Insights.</p>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact-form" class="btn btn-primary">Send a Message</a>
+                <a href="https://app.wippli.ai/form/33/66?guest_token=e61c59f5bee946535e7ceac1e832a9294a1b554797b95c615a313336daa23601" target="_blank" class="btn btn-orange">Free R&D Insights Report</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="rd-insights">
+        <div class="section-header">
+            <h2>R&D Insights Report</h2>
+            <p>AI-powered strategic analysis in minutes, not weeks</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Interactive Dashboard</h3>
+                <p>Visualizations of competitive landscape, timelines, trial sites, and budget allocation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Strategic Brief</h3>
+                <p>Executive narrative with implementation roadmap and regulatory guidance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Expert Analysis</h3>
+                <p>Deep research across Clinical Development, Regulatory, and Medical Affairs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="section-header">
+            <h2>How It Works</h2>
+        </div>
+        <div class="how-steps">
+            <div class="how-step">
+                <h4>Complete Questionnaire</h4>
+                <p>Answer 9 simple fields about your therapeutic area and strategic priorities. Takes just 2 minutes.</p>
+            </div>
+            <div class="how-step">
+                <h4>AI Analysis</h4>
+                <p>Our system analyzes your inputs against comprehensive market data and competitive landscapes.</p>
+            </div>
+            <div class="how-step">
+                <h4>Receive Dashboard</h4>
+                <p>Get your personalized R&D Intelligence Dashboard within minutes with strategic recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <h2>Ready to Get Started?</h2>
+        <p>Try our free R&D Insights Report or contact us for personalized consulting.</p>
+        <div class="cta-buttons">
+            <a href="https://app.wippli.ai/form/33/66?guest_token=e61c59f5bee946535e7ceac1e832a9294a1b554797b95c615a313336daa23601" target="_blank" class="btn btn-orange">Start Free Analysis</a>
+            <a href="#contact-form" class="btn btn-primary">Contact Us</a>
+        </div>
+    </section>
+
+    <section class="section alt" id="contact-form">
+        <div class="contact-form-wrapper">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="81584337-1236-4188-a518-022bab9f9dcd">
+                <input type="hidden" name="subject" value="New Contact Form Submission - NADDBio Website">
+                <input type="hidden" name="redirect" value="https://www.naddbio.com/naddbio_contact_mobile.html?submitted=true">
+                <input type="hidden" name="from_name" value="NADDBio Website">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="interest">Area of Interest</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select an option</option>
+                        <option value="clinical">Clinical Development</option>
+                        <option value="regulatory">Regulatory Affairs</option>
+                        <option value="pharmacovigilance">Pharmacovigilance</option>
+                        <option value="medical">Medical Affairs</option>
+                        <option value="business">Business Development</option>
+                        <option value="insights">R&D Insights Report</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..."></textarea>
+                </div>
+                <div class="form-group consent-group">
+                    <label class="consent-label">
+                        <input type="checkbox" name="consent" required>
+                        <span>I agree to NADDBio storing my submitted information to respond to my inquiry.</span>
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <h2>Contact Information</h2>
+        </div>
+        <ul class="contact-details">
+            <li>
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="contact-text">
+                    <strong>Location</strong>
+                    <span>Cambridge, Massachusetts, USA<br>UK & EU Eligible</span>
+                </div>
+            </li>
+            <li>
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div class="contact-text">
+                    <strong>Phone</strong>
+                    <a href="tel:+16174078015">+1 617 407 8015</a>
+                </div>
+            </li>
+            <li>
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="contact-text">
+                    <strong>Email</strong>
+                    <a href="mailto:info@naddbio.com">info@naddbio.com</a>
+                </div>
+            </li>
+            <li>
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </div>
+                <div class="contact-text">
+                    <strong>LinkedIn</strong>
+                    <a href="https://www.linkedin.com/company/naddbio" target="_blank">NADDBio</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <a href="#" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo-negative.svg" alt="NADDBio"></a>
+            <p>Biopharmaceutical R&D consultancy offering strategic advisory services.</p>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">R&D Consulting</a></li>
+                    <li><a href="#">Clinical Development</a></li>
+                    <li><a href="#">Regulatory Affairs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>Cambridge, MA</li>
+                    <li><a href="tel:+16174078015">+1 617-407-8015</a></li>
+                    <li><a href="mailto:info@naddbio.com">info@naddbio.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        mobileToggle.addEventListener('click', function() { this.classList.toggle('active'); navLinks.classList.toggle('active'); });
+        navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileToggle.classList.remove('active'); navLinks.classList.remove('active'); }); });
+        // Check if form was submitted successfully
+        if (window.location.search.includes('submitted=true')) {
+            alert('Thank you for your message! We will get back to you shortly.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+
+</body>
+</html>

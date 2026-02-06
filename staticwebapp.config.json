@@ -1,0 +1,28 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    { "route": "/services", "rewrite": "/naddbio_services.html" },
+    { "route": "/about", "rewrite": "/naddbio-about-mockup.html" },
+    { "route": "/contact", "rewrite": "/naddbio_contact.html" },
+    { "route": "/therapeutic-areas", "rewrite": "/naddbio_therapeutic_areas.html" },
+    { "route": "/team", "rewrite": "/naddbio_meet_the_team.html" },
+    { "route": "/leadership", "rewrite": "/naddbio_leadership.html" }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".svg": "image/svg+xml"
+  }
+}

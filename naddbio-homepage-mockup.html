@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NADDBio - Homepage Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e62a0;
+            --gradient-start: #31b44a;
+            --gradient-end: #8abe40;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-text: #1a1a2e;
+            --body-text: #4a5568;
+            --gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--body-text);
+            background: var(--white);
+        }
+
+        /* ========================================
+           PAGE SYSTEM - Magnetic Snap Pages
+           Each .page is exactly viewport height
+           minus header, with scroll-snap
+        ======================================== */
+        .page {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Page 1 (Hero) - full viewport, no header offset needed */
+        .page--hero {
+            min-height: 100vh;
+        }
+
+        /* Pages 2-5 - account for fixed header */
+        .page--content {
+            padding-top: var(--header-height);
+            min-height: 100vh;
+        }
+
+        /* Inner wrapper fills remaining space */
+        .page__inner {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant', serif;
+            color: var(--dark-text);
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            height: var(--header-height);
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--body-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(49, 180, 74, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(49, 180, 74, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-orange {
+            background: #f7941d;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.3);
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4);
+            background: #e8850a;
+        }
+
+        /* ========================================
+           PAGE 1: HERO
+        ======================================== */
+        .hero {
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fallback poster/placeholder for video - hidden when video exists */
+        .hero-video-placeholder {
+            display: none;
+        }
+
+        .hero-overlay {
+            display: none; /* Removed - using text shadow instead */
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes heroFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.8);
+            padding: 40px 60px;
+            display: inline-block;
+            /* Elegant delayed fade-in */
+            opacity: 0;
+            animation: heroFade 2s ease-out 1.5s forwards;
+        }
+
+        .hero .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--primary-blue);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 0;
+            max-width: 650px;
+            line-height: 1.7;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--body-text);
+        }
+
+        /* ========================================
+           PAGE 2: TRUST METRICS + ABOUT
+        ======================================== */
+        /* Trust Metrics - Header style at top */
+        .trust-metrics {
+            padding: 30px 0 30px;
+            border-bottom: 1px solid #eee;
+            flex: 0 0 auto;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            text-align: center;
+        }
+
+        .metric h3 {
+            font-size: 56px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .metric p {
+            font-size: 13px;
+            color: var(--body-text);
+            margin-top: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* About Section - fills remaining space */
+        .about {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .section-header.compact {
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           PAGE 3: SERVICES
+        ======================================== */
+        .services {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--light-gray);
+            padding: 40px 0;
+        }
+
+        .services .section-header {
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 32px 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--gradient);
+            border-radius: 10px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .service-card h3 {
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        /* ========================================
+           PAGE 4: THERAPEUTIC + WHY US
+        ======================================== */
+        /* Therapeutic Areas - takes majority of space */
+        .therapeutic {
+            padding: 40px 0 40px;
+            background: var(--white);
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .therapeutic .section-header {
+            margin-bottom: 30px;
+        }
+
+        .therapeutic .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .therapeutic .section-header p {
+            font-size: 17px;
+        }
+
+        .therapeutic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .therapeutic-item {
+            padding: 22px 16px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .therapeutic-item:hover {
+            border-color: var(--gradient-start);
+            background: var(--white);
+        }
+
+        .therapeutic-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        /* Why NADDBio - compact blue section */
+        .why-us {
+            padding: 30px 0 30px;
+            background: var(--primary-blue);
+            color: var(--white);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .why-us .section-header {
+            margin-bottom: 30px;
+        }
+
+        .why-us .section-header h2 {
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .why-us .section-header p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .why-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            font-size: 14px;
+            opacity: 0.85;
+            line-height: 1.55;
+        }
+
+        /* ========================================
+           PAGE 5: CTA + FOOTER
+        ======================================== */
+        /* CTA Section - fills available space */
+        .cta {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--light-gray);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            font-size: 17px;
+            margin-bottom: 24px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer - fixed height */
+        .footer {
+            background: var(--dark-text);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0 20px;
+            flex: 0 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+            font-size: 28px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* ========================================
+           SCROLL ANIMATIONS - Creative Reveal
+           Intersection Observer driven
+        ======================================== */
+
+        /* Keyframe Animations - Elegant & Slow */
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes revealScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes revealLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes revealRight {
+            from {
+                opacity: 0;
+                transform: translateX(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Base state - hidden */
+        [data-reveal] {
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        /* Revealed state - slow & elegant */
+        [data-reveal].revealed {
+            animation-duration: 1.4s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        /* Animation types */
+        [data-reveal="up"].revealed { animation-name: revealUp; }
+        [data-reveal="scale"].revealed { animation-name: revealScale; }
+        [data-reveal="left"].revealed { animation-name: revealLeft; }
+        [data-reveal="right"].revealed { animation-name: revealRight; }
+        [data-reveal="count"].revealed { animation-name: countUp; }
+
+        /* Staggered delays - more spaced out */
+        [data-delay="1"] { animation-delay: 0.15s !important; }
+        [data-delay="2"] { animation-delay: 0.3s !important; }
+        [data-delay="3"] { animation-delay: 0.45s !important; }
+        [data-delay="4"] { animation-delay: 0.6s !important; }
+        [data-delay="5"] { animation-delay: 0.75s !important; }
+        [data-delay="6"] { animation-delay: 0.9s !important; }
+        [data-delay="7"] { animation-delay: 1.05s !important; }
+        [data-delay="8"] { animation-delay: 1.2s !important; }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            [data-reveal] {
+                opacity: 1;
+                transform: none;
+                filter: none;
+                animation: none !important;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE - Mobile disables snap
+        ======================================== */
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
+            html {
+                scroll-snap-type: none;
+            }
+
+            .page {
+                min-height: auto;
+                scroll-snap-align: none;
+            }
+
+            .page--content {
+                padding-top: var(--header-height);
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-content {
+                padding: 24px 20px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .metric h3 {
+                font-size: 36px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .therapeutic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo.svg" alt="NADDBio" height="40"></a>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Therapeutic Areas</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" id="full-html-btn" target="_blank" class="btn btn-primary">Full HTML</a>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         PAGE 1: HERO
+    =========================================== -->
+    <div class="page page--hero">
+        <section class="hero">
+            <!-- Video Background -->
+            <div class="hero-video-container">
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                >
+                    <source src="hero-video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Biopharmaceutical Consulting<br>for R&D Excellence</h1>
+                    <p>We offer consulting services that drive improved R&D productivity and performance for biopharmaceutical companies and contract research organizations at every stage of development.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==========================================
+         PAGE 2: TRUST METRICS + ABOUT
+    =========================================== -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <!-- Trust Metrics -->
+            <section class="trust-metrics">
+                <div class="container">
+                    <div class="metrics-grid">
+                        <div class="metric" data-reveal="count" data-delay="1">
+                            <h3>7</h3>
+                            <p>Therapeutic Areas</p>
+                        </div>
+                        <div class="metric" data-reveal="count" data-delay="2">
+                            <h3>20+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="metric" data-reveal="count" data-delay="3">
+                            <h3>6</h3>
+                            <p>Core Services</p>
+                        </div>
+                        <div class="metric" data-reveal="count" data-delay="4">
+                            <h3>100%</h3>
+                            <p>Client Focused</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about">
+                <div class="container">
+                    <div class="section-header compact" data-reveal="up">
+                        <h2>About NADDBio</h2>
+                        <p>We are intensely driven by science and dedicated to having a profound impact on addressing some of today's most urgent medical needs through innovative drug development strategies.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 3: SERVICES
+    =========================================== -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="services">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>What We Do</h2>
+                        <p style="white-space: nowrap;">Comprehensive consulting services across the entire drug development lifecycle</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card" data-reveal="scale" data-delay="1">
+                            <div class="service-icon">R</div>
+                            <h3>R&D Consulting</h3>
+                            <p>Strategic guidance through the entire clinical trial lifecycle with consulting, monitoring, and auditing support.</p>
+                        </div>
+                        <div class="service-card" data-reveal="scale" data-delay="2">
+                            <div class="service-icon">C</div>
+                            <h3>Clinical Development</h3>
+                            <p>Accelerate your programs through strategy optimisation that balances scientific rigour with speed-to-market, patient safety with commercial viability, and innovation with regulatory pragmatism.</p>
+                        </div>
+                        <div class="service-card" data-reveal="scale" data-delay="3">
+                            <div class="service-icon">P</div>
+                            <h3>Pharmacovigilance & Drug Safety</h3>
+                            <p>Build robust frameworks to ensure patient safety, regulatory compliance, risk management, and provide safety intelligence impacting clinical programs, labelling and product viability.</p>
+                        </div>
+                        <div class="service-card" data-reveal="scale" data-delay="4">
+                            <div class="service-icon">R</div>
+                            <h3>Regulatory Affairs</h3>
+                            <p>Develop regulatory strategies to optimise approval pathways and manage post-approval commitments, navigating regulatory landscape to accelerate time-to-market.</p>
+                        </div>
+                        <div class="service-card" data-reveal="scale" data-delay="5">
+                            <div class="service-icon">M</div>
+                            <h3>Medical Affairs</h3>
+                            <p>Develop proprietary frameworks for Medical Affairs excellence that demonstrate measurable impact on product adoption and scientific engagement.</p>
+                        </div>
+                        <div class="service-card" data-reveal="scale" data-delay="6">
+                            <div class="service-icon">B</div>
+                            <h3>Business Strategy</h3>
+                            <p>Opportunity mapping, asset valuation, licensing support, and due diligence for portfolio growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 4: THERAPEUTIC + WHY US
+    =========================================== -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <!-- Therapeutic Areas -->
+            <section class="therapeutic">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Therapeutic Areas</h2>
+                        <p>Deep expertise across multiple therapeutic domains</p>
+                    </div>
+                    <div class="therapeutic-grid">
+                        <div class="therapeutic-item" data-reveal="left" data-delay="1">
+                            <h4>Cardiovascular, Renal & Metabolism (CVRM)</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="right" data-delay="2">
+                            <h4>Oncology</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="left" data-delay="3">
+                            <h4>Immunology & Inflammation (Rheumatology, Respiratory, Dermatology & Gastroenterology)</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="right" data-delay="4">
+                            <h4>Neurosciences</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="left" data-delay="5">
+                            <h4>Infectious Diseases</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="right" data-delay="6">
+                            <h4>Vaccines</h4>
+                        </div>
+                        <div class="therapeutic-item" data-reveal="left" data-delay="7">
+                            <h4>Rare Diseases</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why NADDBio -->
+            <section class="why-us">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Why NADDBio</h2>
+                        <p>Partner with experts who understand your challenges</p>
+                    </div>
+                    <div class="why-grid">
+                        <div class="why-item" data-reveal="scale" data-delay="1">
+                            <div class="why-icon">E</div>
+                            <h3>Expert Team</h3>
+                            <p>Seasoned professionals with deep therapeutic expertise and hands-on industry experience.</p>
+                        </div>
+                        <div class="why-item" data-reveal="scale" data-delay="2">
+                            <div class="why-icon">Q</div>
+                            <h3>Quality Focus</h3>
+                            <p>Rigorous standards and attention to detail in every aspect of our consulting services.</p>
+                        </div>
+                        <div class="why-item" data-reveal="scale" data-delay="3">
+                            <div class="why-icon">$</div>
+                            <h3>Cost Effective</h3>
+                            <p>Tailored solutions that respect your timeline and budget without compromising quality through various engagement models.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 5: CTA + FOOTER
+    =========================================== -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2 data-reveal="up">Ready to Advance Your Drug Development?</h2>
+                    <p data-reveal="up" data-delay="1">Let's discuss how NADDBio can support your next phase of growth with strategic consulting services.</p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="#" class="btn btn-primary" data-reveal="scale" data-delay="2">Contact Us Today</a>
+                        <a href="https://app.wippli.ai/form/33/66?guest_token=e61c59f5bee946535e7ceac1e832a9294a1b554797b95c615a313336daa23601" target="_blank" class="btn btn-orange" data-reveal="scale" data-delay="3">Free R&D Insights Report</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-brand">
+                            <a href="#" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo-negative.svg" alt="NADDBio" height="40"></a>
+                            <p>Biopharmaceutical R&D consultancy offering strategic and operational advisory services across clinical development, pharmacovigilance, medical affairs, and regulatory functions.</p>
+                        </div>
+                        <div>
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#">R&D Consulting</a></li>
+                                <li><a href="#">Clinical Development</a></li>
+                                <li><a href="#">Regulatory Affairs</a></li>
+                                <li><a href="#">Pharmacovigilance</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Therapeutic Areas</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>245 First Street, Suite 1800</li>
+                                <li>Cambridge, MA 02142-1292</li>
+                                <li><a href="tel:+16174078015">+1 617-407-8015</a></li>
+                                <li><a href="mailto:info@naddbio.com">info@naddbio.com</a></li>
+                                <li><a href="https://www.linkedin.com/company/naddbio" target="_blank">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved. | <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scroll Reveal Animation Script -->
+    <script>
+        (function() {
+            // Dynamic year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Force video autoplay
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                video.play().catch(function(error) {
+                    console.log('Autoplay prevented:', error);
+                });
+            }
+
+            // Dynamic Full HTML link based on wippli_id
+            (function() {
+                var urlParams = new URLSearchParams(window.location.search);
+                var wippliId = urlParams.get('wippli_id');
+                var fullHtmlBtn = document.getElementById('full-html-btn');
+
+                if (fullHtmlBtn && wippliId) {
+                    fullHtmlBtn.href = 'https://branniumassets.blob.core.windows.net/naddbio/proof-' + wippliId + '.html';
+                } else if (fullHtmlBtn) {
+                    // Fallback: get wippli_id from filename if opened from blob
+                    var path = window.location.pathname;
+                    var match = path.match(/proof-(\d+)\.html/);
+                    if (match) {
+                        fullHtmlBtn.href = window.location.href;
+                    }
+                }
+            })();
+
+            // Intersection Observer for scroll reveal
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -15% 0px',
+                threshold: 0.15
+            };
+
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with data-reveal attribute
+            document.querySelectorAll('[data-reveal]').forEach(el => {
+                revealOnScroll.observe(el);
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Team - NADDBio Biopharmaceutical Consulting</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet NADDBio's leadership team. Industry veterans with decades of experience in pharmaceutical medicine, drug development, and clinical research leadership.">
+    <meta name="keywords" content="NADDBio leadership, pharmaceutical executives, biopharmaceutical leaders, drug development leadership, clinical research directors">
+    <meta name="author" content="NADDBio">
+    <link rel="canonical" href="https://www.naddbio.com/leadership">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.naddbio.com/leadership">
+    <meta property="og:title" content="Leadership Team - NADDBio Biopharmaceutical Consulting">
+    <meta property="og:description" content="Industry veterans with decades of experience in pharmaceutical medicine, drug development, and clinical research leadership.">
+    <meta property="og:image" content="https://www.naddbio.com/og-image.png">
+    <meta property="og:site_name" content="NADDBio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.naddbio.com/leadership">
+    <meta name="twitter:title" content="Leadership Team - NADDBio Biopharmaceutical Consulting">
+    <meta name="twitter:description" content="Industry veterans with decades of experience in pharmaceutical medicine, drug development, and clinical research leadership.">
+    <meta name="twitter:image" content="https://www.naddbio.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Mobile Device Detection & Redirect -->
+    <script>
+        (function() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                || (window.innerWidth <= 768);
+            if (isMobile && window.location.pathname.indexOf('_mobile') === -1) {
+                var mobilePage = window.location.pathname.replace('.html', '_mobile.html');
+                window.location.replace(mobilePage);
+            }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e62a0;
+            --gradient-start: #31b44a;
+            --gradient-end: #8abe40;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-text: #1a1a2e;
+            --body-text: #4a5568;
+            --gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            --header-height: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--body-text);
+            background: var(--white);
+        }
+
+        .page {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page--hero { min-height: 100vh; }
+        .page--content { padding-top: var(--header-height); min-height: 100vh; }
+        .page__inner { flex: 1; display: flex; flex-direction: column; }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant', serif;
+            color: var(--dark-text);
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            height: var(--header-height);
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--body-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { color: var(--primary-blue); }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 101;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 3px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(49, 180, 74, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(49, 180, 74, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-orange {
+            background: #f7941d;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(247, 148, 29, 0.3);
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(247, 148, 29, 0.4);
+            background: #e8850a;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #154875 100%);
+            min-height: 100vh;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        @keyframes heroFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-image-wrapper {
+            opacity: 0;
+            animation: heroFade 1.2s ease-out 0.3s forwards;
+        }
+
+        .profile-image {
+            width: 320px;
+            height: 380px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            color: var(--white);
+            opacity: 0;
+            animation: heroFade 1.2s ease-out 0.5s forwards;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        .hero-credentials {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: 20px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero-contact a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .hero-contact a:hover { color: var(--white); }
+
+        .hero-summary {
+            font-size: 17px;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.9);
+            max-width: 650px;
+        }
+
+        .hero-cta {
+            margin-top: 30px;
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Section Styles */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .bio-text {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .bio-text strong { color: var(--dark-text); }
+
+        /* Therapeutic Tags */
+        .therapeutic-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .therapeutic-section .section-header h2 { color: var(--white); }
+        .therapeutic-section .section-header p { color: rgba(255,255,255,0.85); }
+
+        .therapeutic-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .therapeutic-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .therapeutic-tag:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Clients Section */
+        .clients-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .client-logo {
+            height: 36px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(100%) brightness(0) opacity(0.4);
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0%) brightness(1) opacity(1);
+        }
+
+        /* Center last 2 logos on the third row */
+        .clients-grid .client-logo:nth-child(11) {
+            grid-column: 2;
+        }
+        .clients-grid .client-logo:nth-child(12) {
+            grid-column: 4;
+        }
+
+        /* Credentials Section */
+        .credentials-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .credential-card {
+            background: var(--light-gray);
+            padding: 28px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .credential-card:hover {
+            border-color: var(--gradient-start);
+            background: var(--white);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .credential-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        .credential-card h4 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .credential-card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--light-gray);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            max-width: 550px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-text);
+            color: rgba(255,255,255,0.7);
+            padding: 70px 0 35px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+            font-size: 28px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 10px; }
+
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Scroll Animations */
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes revealScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        [data-reveal] {
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        [data-reveal].revealed {
+            animation-duration: 1.4s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        [data-reveal="up"].revealed { animation-name: revealUp; }
+        [data-reveal="scale"].revealed { animation-name: revealScale; }
+
+        [data-delay="1"] { animation-delay: 0.15s !important; }
+        [data-delay="2"] { animation-delay: 0.3s !important; }
+        [data-delay="3"] { animation-delay: 0.45s !important; }
+        [data-delay="4"] { animation-delay: 0.6s !important; }
+        [data-delay="5"] { animation-delay: 0.75s !important; }
+        [data-delay="6"] { animation-delay: 0.9s !important; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            :root { --header-height: 70px; }
+
+            html, body { overflow-x: hidden; max-width: 100vw; }
+            html { scroll-snap-type: y proximity; }
+            .page { min-height: 100vh; }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+                padding-top: 100px;
+            }
+
+            .profile-image-wrapper { display: flex; justify-content: center; }
+            .profile-image { width: 200px; height: 240px; }
+
+            .hero h1 { font-size: 32px; }
+            .hero-title { font-size: 17px; }
+            .hero-contact { justify-content: center; }
+            .hero-summary { margin: 0 auto; }
+            .hero-cta { justify-content: center; flex-wrap: wrap; }
+
+            .bio-grid { grid-template-columns: 1fr; }
+            .clients-grid { grid-template-columns: repeat(2, 1fr); }
+            .credentials-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .section-header h2 { font-size: 32px; }
+
+            .mobile-menu-toggle { display: flex; }
+            .nav .btn-primary { display: none; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px 24px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: 14px 0; border-bottom: 1px solid var(--light-gray); }
+            .nav-links li:last-child { border-bottom: none; }
+            .nav-links a { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo.svg" alt="NADDBio" height="40"></a>
+            <ul class="nav-links">
+                <li><a href="naddbio-about-mockup.html">About</a></li>
+                <li><a href="naddbio_services.html">Services</a></li>
+                <li><a href="naddbio_therapeutic_areas.html">Therapeutic Areas</a></li>
+                <li><a href="naddbio_leadership.html" class="active">Leadership</a></li>
+                <li><a href="naddbio_contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="naddbio_contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- PAGE 1: HERO -->
+    <div class="page page--hero">
+        <section class="hero">
+            <div class="container">
+                <div class="profile-image-wrapper">
+                    <div class="profile-image">
+                        <img src="https://branniumassets.blob.core.windows.net/naddbio/Kingsley_Urakpo-581x394.jpeg" alt="Kingsley Urakpo">
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <span class="hero-badge">Founder & Managing Member</span>
+                    <h1>Kingsley Urakpo<br><span style="font-size:0.65em">MD, MSc, MBA, FFPM</span></h1>
+                    <div class="hero-credentials">FFPM-RCP | UK PMST Certified in Pharmaceutical Medicine</div>
+                    <div class="hero-title">Senior Pharmaceutical Physician<br>Clinical Development & Drug Safety Executive</div>
+
+                    <div class="hero-contact">
+                        <a href="mailto:kingsley.urakpo@naddbio.com">kingsley.urakpo@naddbio.com</a>
+                        <a href="tel:+16174078015">+1 617 407 8015</a>
+                        <a href="https://linkedin.com/in/kingsleyurakpo" target="_blank">LinkedIn</a>
+                    </div>
+
+                    <p class="hero-summary">17+ years of global biopharma experience across clinical development (Phases I-IV), pharmacovigilance/drug safety, medical affairs, and regulatory strategy. Trusted advisor to biotech CEOs, CROs, and investors, providing fractional and consulting leadership from first-in-human through post-marketing.</p>
+
+                    <div class="hero-cta">
+                        <a href="naddbio_contact.html" class="btn btn-primary">Contact Kingsley</a>
+                        <a href="https://www.linkedin.com/in/kingsleyurakpo" target="_blank" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.5); color: var(--white);">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PAGE 2: BIO & VALUE -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="bio-section">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>About Kingsley</h2>
+                        <p>Senior physician leadership without permanent executive overhead</p>
+                    </div>
+                    <div class="bio-grid">
+                        <div data-reveal="up" data-delay="1">
+                            <p class="bio-text">Kingsley is a <strong>Senior Pharmaceutical Physician</strong> with 17+ years of global biopharma experience across clinical development (Phases I-IV), pharmacovigilance/drug safety, medical affairs, and regulatory strategy.</p>
+                            <p class="bio-text">He is UK PMST-certified in Pharmaceutical Medicine and a <strong>Fellow of the Faculty of Pharmaceutical Medicine, UK Royal College of Physicians (FFPM-RCP)</strong>.</p>
+                            <p class="bio-text">Kingsley is a trusted advisor to biotech CEOs, CROs, and investors, providing fractional and consulting leadership from first-in-human through post-marketing.</p>
+                        </div>
+                        <div data-reveal="up" data-delay="2">
+                            <p class="bio-text">He has proven ability to <strong>de-risk assets</strong>, guide regulator-ready programs, and support clinical & safety due diligence for licensing deals, M&A, and asset transactions.</p>
+                            <p class="bio-text">Kingsley brings deep therapeutic breadth spanning <strong>cardiorenal-metabolic, oncology, inflammation/immunology, neuroscience, rare diseases, and vaccines</strong>.</p>
+                            <p class="bio-text">As founder of NADDBio, he delivers senior physician leadership without permanent executive overhead - enabling biotech and pharma sponsors to access world-class expertise on demand.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE 3: THERAPEUTIC EXPERTISE -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="therapeutic-section">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Therapeutic Expertise</h2>
+                        <p>Deep experience across multiple therapeutic domains and modalities</p>
+                    </div>
+                    <div class="therapeutic-grid" data-reveal="scale" data-delay="1">
+                        <span class="therapeutic-tag">Cardiorenal-Metabolic</span>
+                        <span class="therapeutic-tag">Oncology</span>
+                        <span class="therapeutic-tag">Inflammation/Immunology</span>
+                        <span class="therapeutic-tag">Neuroscience</span>
+                        <span class="therapeutic-tag">Rare Diseases</span>
+                        <span class="therapeutic-tag">Vaccines</span>
+                        <span class="therapeutic-tag">Small Molecules</span>
+                        <span class="therapeutic-tag">Biologics</span>
+                        <span class="therapeutic-tag">Cell & Gene Therapy</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CLIENTS -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="clients-section">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Featured Clients</h2>
+                        <p>Trusted by leading pharmaceutical and biotechnology organizations worldwide</p>
+                    </div>
+                    <div class="clients-grid">
+                        <img src="logos/logo-astrazeneca.svg" alt="AstraZeneca" class="client-logo" data-reveal="scale" data-delay="1" onclick="window.open('https://www.astrazeneca.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-csl-seqirus.svg" alt="CSL Seqirus" class="client-logo" data-reveal="scale" data-delay="2" onclick="window.open('https://www.seqirus.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-medivir.svg" alt="Medivir AB" class="client-logo" data-reveal="scale" data-delay="3" onclick="window.open('https://www.medivir.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-barinthus.svg" alt="Barinthus Biotherapeutics" class="client-logo" data-reveal="scale" data-delay="1" onclick="window.open('https://www.barinthus.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-ucb-pharma.svg" alt="UCB Pharma" class="client-logo" data-reveal="scale" data-delay="2" onclick="window.open('https://www.ucb.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-johnson-johnson.svg" alt="Johnson & Johnson" class="client-logo" data-reveal="scale" data-delay="3" onclick="window.open('https://www.jnj.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-ipsen.svg" alt="Ipsen" class="client-logo" data-reveal="scale" data-delay="1" onclick="window.open('https://www.ipsen.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-eli-lilly.svg" alt="Eli Lilly" class="client-logo" data-reveal="scale" data-delay="2" onclick="window.open('https://www.lilly.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/ventus-full.png" alt="Ventus Therapeutics" class="client-logo" data-reveal="scale" data-delay="3" onclick="window.open('https://www.ventustx.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-praxis.svg" alt="Praxis Precision Medicines" class="client-logo" data-reveal="scale" data-delay="1" onclick="window.open('https://www.praxismedicines.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-precision-for-medicine.png" alt="Precision for Medicine" class="client-logo" data-reveal="scale" data-delay="2" onclick="window.open('https://www.precisionformedicine.com/', '_blank')" style="cursor:pointer">
+                        <img src="logos/logo-medassessment.svg" alt="MedAssessment" class="client-logo" data-reveal="scale" data-delay="3" onclick="window.open('https://medassessment.com/', '_blank')" style="cursor:pointer">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE 5: CREDENTIALS -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="credentials-section">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Credentials & Expertise</h2>
+                        <p>Comprehensive pharmaceutical medicine expertise spanning the full drug development lifecycle</p>
+                    </div>
+                    <div class="credentials-grid">
+                        <div class="credential-card" data-reveal="scale" data-delay="1">
+                            <div class="credential-icon">F</div>
+                            <h4>FFPM-RCP</h4>
+                            <p>Fellow, Faculty of Pharmaceutical Medicine, UK Royal College of Physicians</p>
+                        </div>
+                        <div class="credential-card" data-reveal="scale" data-delay="2">
+                            <div class="credential-icon">S</div>
+                            <h4>UK PMST Certified</h4>
+                            <p>Specialist Registration in Pharmaceutical Medicine</p>
+                        </div>
+                        <div class="credential-card" data-reveal="scale" data-delay="3">
+                            <div class="credential-icon">C</div>
+                            <h4>Clinical Development</h4>
+                            <p>Phases I-IV strategy, protocol design, medical oversight</p>
+                        </div>
+                        <div class="credential-card" data-reveal="scale" data-delay="4">
+                            <div class="credential-icon">P</div>
+                            <h4>Pharmacovigilance</h4>
+                            <p>Drug safety, risk management, safety governance</p>
+                        </div>
+                        <div class="credential-card" data-reveal="scale" data-delay="5">
+                            <div class="credential-icon">M</div>
+                            <h4>Medical Affairs</h4>
+                            <p>Scientific communications, evidence generation</p>
+                        </div>
+                        <div class="credential-card" data-reveal="scale" data-delay="6">
+                            <div class="credential-icon">R</div>
+                            <h4>Regulatory Strategy</h4>
+                            <p>FDA, EMA, MHRA, PMDA, TGA engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE 6: CTA + FOOTER -->
+    <div class="page page--content">
+        <div class="page__inner">
+            <section class="cta" id="contact">
+                <div class="container">
+                    <h2 data-reveal="up">Work With Dr. Urakpo</h2>
+                    <p data-reveal="up" data-delay="1">Leverage senior pharmaceutical physician expertise for your clinical development, safety, and regulatory needs.</p>
+                    <div class="cta-buttons">
+                        <a href="naddbio_contact.html" class="btn btn-primary" data-reveal="scale" data-delay="2">Contact Us Today</a>
+                        <a href="https://app.wippli.ai/form/33/66?guest_token=e61c59f5bee946535e7ceac1e832a9294a1b554797b95c615a313336daa23601" target="_blank" class="btn btn-orange" data-reveal="scale" data-delay="3">Free R&D Insights Report</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-brand">
+                            <a href="#" class="logo"><img src="https://branniumassets.blob.core.windows.net/naddbio/naddbio-logo-negative.svg" alt="NADDBio" height="40"></a>
+                            <p>Biopharmaceutical R&D consultancy offering strategic and operational advisory services across clinical development, pharmacovigilance, medical affairs, and regulatory functions.</p>
+                        </div>
+                        <div>
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#">R&D Consulting</a></li>
+                                <li><a href="#">Clinical Development</a></li>
+                                <li><a href="#">Regulatory Affairs</a></li>
+                                <li><a href="#">Pharmacovigilance</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Therapeutic Areas</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Contact</h4>
+                            <ul>
+                                <li>Cambridge, Massachusetts, USA</li>
+                                <li>UK & EU Eligible</li>
+                                <li><a href="tel:+16174078015">+1 617 407 8015</a></li>
+                                <li><a href="mailto:info@naddbio.com">info@naddbio.com</a></li>
+                                <li><a href="https://www.linkedin.com/company/naddbio" target="_blank">LinkedIn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Scroll reveal
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -15% 0px',
+                threshold: 0.15
+            };
+
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        revealOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('[data-reveal]').forEach(el => {
+                revealOnScroll.observe(el);
+            });
+        })();
+
+    </script>
+
+</body>
+</html>
