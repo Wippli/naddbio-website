@@ -969,10 +969,33 @@
         }
 
         .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 24px;
-            text-align: center;
             font-size: 14px;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-right {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-bottom-right a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-bottom-right a:hover {
+            color: var(--white);
         }
 
         /* ========================================
@@ -1366,7 +1389,7 @@
             <div class="contact-form-wrapper">
                 <h3>Send Us a Message</h3>
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="81584337-1236-4188-a518-022bab9f9dcd">
+                    <input type="hidden" name="access_key" value="adbb7453-2cd1-4ec8-bb56-3094cedf6fb7">
                     <input type="hidden" name="subject" value="New Contact Form Submission - NADDBio Website">
                     <input type="hidden" name="redirect" value="https://www.naddbio.com/naddbio_contact.html?submitted=true">
                     <input type="hidden" name="from_name" value="NADDBio Website">
@@ -1457,8 +1480,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved. | <a href="#">Privacy Policy</a></p>
-            </div>
+                        <div class="footer-bottom-left">
+                            <span>&copy; 2026 NADDBio. All rights reserved.</span>
+                            <a href="/privacy-policy.html">Privacy Policy</a>
+                        </div>
+                        <div class="footer-bottom-right">
+                            Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a>
+                        </div>
+                    </div>
         </div>
     </footer>
 

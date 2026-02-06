@@ -8,7 +8,8 @@
     { "route": "/contact", "rewrite": "/naddbio_contact.html" },
     { "route": "/therapeutic-areas", "rewrite": "/naddbio_therapeutic_areas.html" },
     { "route": "/team", "rewrite": "/naddbio_meet_the_team.html" },
-    { "route": "/leadership", "rewrite": "/naddbio_leadership.html" }
+    { "route": "/leadership", "rewrite": "/naddbio_leadership.html" },
+    { "route": "/privacy-policy", "rewrite": "/privacy-policy.html" }
   ],
   "responseOverrides": {
     "404": {

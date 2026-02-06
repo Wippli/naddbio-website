@@ -41,8 +41,9 @@ The website is now hosted on Azure Static Web Apps with enterprise-grade securit
 | Therapeutic Areas | naddbio_therapeutic_areas.html | naddbio_therapeutic_areas_mobile.html | Areas of expertise |
 | Meet the Team | naddbio_meet_the_team.html | naddbio_meet_the_team_mobile.html | Team members |
 | Leadership | naddbio_leadership.html | naddbio_leadership_mobile.html | Leadership profiles |
+| Privacy Policy | privacy-policy.html | — | Privacy & cookie policy |
 
-**Total: 7 pages (14 files including mobile versions)**
+**Total: 8 pages (15 files including mobile versions)**
 
 ---
 
@@ -56,17 +57,19 @@ The website is now hosted on Azure Static Web Apps with enterprise-grade securit
 
 ### SEO Optimization
 - Meta descriptions and keywords on all pages
-- Open Graph tags for social media sharing
+- Open Graph tags for social media sharing (LinkedIn, Facebook)
 - Twitter Card meta tags
 - Canonical URLs
 - XML Sitemap (`sitemap.xml`)
 - Robots file (`robots.txt`)
 - Semantic HTML structure
+- Social sharing image (`og-image.jpg`) for LinkedIn previews
 
 ### Contact Form
 - Functional contact form using Web3Forms
 - Submissions sent directly to client email
 - Form fields: Name, Email, Company, Area of Interest, Message
+- Privacy consent checkbox required before submission
 - Success confirmation on submission
 
 ### Performance & Security
@@ -88,6 +91,33 @@ The website is now hosted on Azure Static Web Apps with enterprise-grade securit
 | **Assets CDN** | Azure Blob Storage |
 | **DNS Provider** | Network Solutions |
 | **SSL Certificate** | Azure-managed (automatic) |
+
+---
+
+## Brand Guidelines
+
+### Colours
+
+| Name | Hex Code | Usage |
+|------|----------|-------|
+| Primary Blue | `#1e62a0` | Headers, links, accents |
+| Green (gradient start) | `#31b44a` | CTA buttons, highlights |
+| Green (gradient end) | `#8abe40` | CTA buttons, highlights |
+| Dark Text | `#1a1a2e` | Headings |
+| Body Text | `#4a5568` | Paragraphs, descriptions |
+| White | `#ffffff` | Backgrounds |
+| Light Gray | `#f8f9fa` | Section backgrounds |
+
+### Fonts
+
+| Type | Font | Source |
+|------|------|--------|
+| Headings | **Cormorant** (serif) | Google Fonts |
+| Body | **Work Sans** (sans-serif) | Google Fonts |
+
+### Gradient
+
+Primary CTA gradient: `linear-gradient(135deg, #31b44a, #8abe40)`
 
 ---
 
@@ -172,22 +202,9 @@ All future additions stay within the same Azure ecosystem, maintaining security 
 - **Static Web App:** naddbio-website
 
 ### Web3Forms (Contact Form)
-- **Current Access Key:** 81584337-1236-4188-a518-022bab9f9dcd
-- **Currently sends to:** design@brannium.com (Brannium will forward)
+- **Access Key:** adbb7453-2cd1-4ec8-bb56-3094cedf6fb7
+- **Sends to:** kingsley.urakpo@naddbio.com
 - **Dashboard:** https://web3forms.com/
-
-#### ACTION REQUIRED: To Receive Form Submissions Directly
-
-**Kingsley** - to have contact form submissions sent directly to your inbox:
-
-1. Go to https://web3forms.com
-2. Enter your email: `kingsley.urakpo@naddbio.com`
-3. Click "Create Access Key"
-4. You'll instantly receive an access key (looks like: `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
-5. Send this key to Brannium at design@brannium.com
-6. Brannium will update the website and redeploy
-
-This takes 2 minutes and is completely free. Until then, Brannium will forward any form submissions to you.
 
 ### Deployment
 - **Method:** Azure SWA CLI
@@ -234,10 +251,12 @@ This takes 2 minutes and is completely free. Until then, Brannium will forward a
 ├── naddbio_meet_the_team_mobile.html
 ├── naddbio_leadership.html             # Leadership page
 ├── naddbio_leadership_mobile.html
+├── privacy-policy.html                 # Privacy & cookie policy
 ├── staticwebapp.config.json            # Azure routing config
 ├── sitemap.xml                         # SEO sitemap
 ├── robots.txt                          # Search engine directives
 ├── favicon.svg                         # Site favicon
+├── og-image.jpg                        # Social sharing image (1280x720)
 └── logos/                              # Client logo assets
 ```
 
@@ -251,3 +270,7 @@ design@brannium.com
 ---
 
 *Document generated: February 2026*
+
+---
+
+*Vibed in [Wippli](https://wippli.ai)® by [Brannium](https://brannium.com)*

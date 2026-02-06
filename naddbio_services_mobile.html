@@ -510,8 +510,13 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 20px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
         }
+
+        .footer-bottom-left { margin-bottom: 8px; }
+        .footer-bottom-left a { color: rgba(255,255,255,0.7); margin-left: 12px; }
+        .footer-bottom-right { color: rgba(255,255,255,0.6); font-size: 12px; }
+        .footer-bottom-right a { color: rgba(255,255,255,0.6); }
     </style>
 </head>
 <body>
@@ -676,7 +681,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved.</p>
+            <div class="footer-bottom-left">
+                <span>&copy; 2026 NADDBio. All rights reserved.</span>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-bottom-right">
+                Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a>
+            </div>
         </div>
     </footer>
 

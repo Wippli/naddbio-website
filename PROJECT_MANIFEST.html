@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>NADDBio Project Manifest</title>
+  <title>NADDBio Website - Project Manifest</title>
   <style>
     html {
       color: #1a1a1a;
@@ -12,11 +12,11 @@
     }
     body {
       margin: 0 auto;
-      max-width: 42em;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
       hyphens: auto;
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
@@ -170,17 +170,21 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">NADDBio Project Manifest</h1>
+<h1 class="title">NADDBio Website - Project Manifest</h1>
 </header>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
-body { font-family: 'IBM Plex Sans', sans-serif; }
+body { font-family: 'IBM Plex Sans', sans-serif; max-width: 42em; padding-left: 25px; padding-right: 25px; }
 figure { margin: 0 0 20px 0; text-align: left; }
 figure img { max-width: 150px; height: auto; }
 figcaption { display: none; }
+table { table-layout: fixed; font-size: 0.85em; word-wrap: break-word; }
+h1.title { display: none; }
 </style>
 <figure>
-<img src="../4-ASSETS_Website_Refresh_Jan_2026/brannium_logo_no_Tx.svg" alt="Brannium" />
+<img src="../4-ASSETS_Website_Refresh_Jan_2026/brannium_logo_no_Tx.svg"
+alt="Brannium" />
+<figcaption aria-hidden="true">Brannium</figcaption>
 </figure>
 <h1 id="naddbio-website---project-manifest">NADDBio Website - Project
 Manifest</h1>
@@ -285,9 +289,15 @@ minor adjustments, and technical questions.</p>
 <td>naddbio_leadership_mobile.html</td>
 <td>Leadership profiles</td>
 </tr>
+<tr>
+<td>Privacy Policy</td>
+<td>privacy-policy.html</td>
+<td>—</td>
+<td>Privacy &amp; cookie policy</td>
+</tr>
 </tbody>
 </table>
-<p><strong>Total: 7 pages (14 files including mobile
+<p><strong>Total: 8 pages (15 files including mobile
 versions)</strong></p>
 <hr />
 <h2 id="features-implemented">Features Implemented</h2>
@@ -301,18 +311,21 @@ versions)</strong></p>
 <h3 id="seo-optimization">SEO Optimization</h3>
 <ul>
 <li>Meta descriptions and keywords on all pages</li>
-<li>Open Graph tags for social media sharing</li>
+<li>Open Graph tags for social media sharing (LinkedIn, Facebook)</li>
 <li>Twitter Card meta tags</li>
 <li>Canonical URLs</li>
 <li>XML Sitemap (<code>sitemap.xml</code>)</li>
 <li>Robots file (<code>robots.txt</code>)</li>
 <li>Semantic HTML structure</li>
+<li>Social sharing image (<code>og-image.jpg</code>) for LinkedIn
+previews</li>
 </ul>
 <h3 id="contact-form">Contact Form</h3>
 <ul>
 <li>Functional contact form using Web3Forms</li>
 <li>Submissions sent directly to client email</li>
 <li>Form fields: Name, Email, Company, Area of Interest, Message</li>
+<li>Privacy consent checkbox required before submission</li>
 <li>Success confirmation on submission</li>
 </ul>
 <h3 id="performance-security">Performance &amp; Security</h3>
@@ -362,6 +375,80 @@ versions)</strong></p>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="brand-guidelines">Brand Guidelines</h2>
+<h3 id="colours">Colours</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Hex Code</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Blue</td>
+<td><code>#1e62a0</code></td>
+<td>Headers, links, accents</td>
+</tr>
+<tr>
+<td>Green (gradient start)</td>
+<td><code>#31b44a</code></td>
+<td>CTA buttons, highlights</td>
+</tr>
+<tr>
+<td>Green (gradient end)</td>
+<td><code>#8abe40</code></td>
+<td>CTA buttons, highlights</td>
+</tr>
+<tr>
+<td>Dark Text</td>
+<td><code>#1a1a2e</code></td>
+<td>Headings</td>
+</tr>
+<tr>
+<td>Body Text</td>
+<td><code>#4a5568</code></td>
+<td>Paragraphs, descriptions</td>
+</tr>
+<tr>
+<td>White</td>
+<td><code>#ffffff</code></td>
+<td>Backgrounds</td>
+</tr>
+<tr>
+<td>Light Gray</td>
+<td><code>#f8f9fa</code></td>
+<td>Section backgrounds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fonts">Fonts</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Font</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headings</td>
+<td><strong>Cormorant</strong> (serif)</td>
+<td>Google Fonts</td>
+</tr>
+<tr>
+<td>Body</td>
+<td><strong>Work Sans</strong> (sans-serif)</td>
+<td>Google Fonts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gradient">Gradient</h3>
+<p>Primary CTA gradient:
+<code>linear-gradient(135deg, #31b44a, #8abe40)</code></p>
 <hr />
 <h2 id="azure-benefits">Azure Benefits</h2>
 <h3 id="why-azure-static-web-apps">Why Azure Static Web Apps?</h3>
@@ -489,27 +576,11 @@ maintaining security and simplicity.</p>
 </ul>
 <h3 id="web3forms-contact-form">Web3Forms (Contact Form)</h3>
 <ul>
-<li><strong>Current Access Key:</strong>
-81584337-1236-4188-a518-022bab9f9dcd</li>
-<li><strong>Currently sends to:</strong> design@brannium.com (Brannium
-will forward)</li>
+<li><strong>Access Key:</strong>
+adbb7453-2cd1-4ec8-bb56-3094cedf6fb7</li>
+<li><strong>Sends to:</strong> kingsley.urakpo@naddbio.com</li>
 <li><strong>Dashboard:</strong> https://web3forms.com/</li>
 </ul>
-<h4 id="action-required-to-receive-form-submissions-directly">ACTION
-REQUIRED: To Receive Form Submissions Directly</h4>
-<p><strong>Kingsley</strong> - to have contact form submissions sent
-directly to your inbox:</p>
-<ol type="1">
-<li>Go to https://web3forms.com</li>
-<li>Enter your email: <code>kingsley.urakpo@naddbio.com</code></li>
-<li>Click “Create Access Key”</li>
-<li>You’ll instantly receive an access key (looks like:
-<code>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</code>)</li>
-<li>Send this key to Brannium at design@brannium.com</li>
-<li>Brannium will update the website and redeploy</li>
-</ol>
-<p>This takes 2 minutes and is completely free. Until then, Brannium
-will forward any form submissions to you.</p>
 <h3 id="deployment">Deployment</h3>
 <ul>
 <li><strong>Method:</strong> Azure SWA CLI</li>
@@ -557,15 +628,20 @@ Recipient</h3>
 ├── naddbio_meet_the_team_mobile.html
 ├── naddbio_leadership.html             # Leadership page
 ├── naddbio_leadership_mobile.html
+├── privacy-policy.html                 # Privacy &amp; cookie policy
 ├── staticwebapp.config.json            # Azure routing config
 ├── sitemap.xml                         # SEO sitemap
 ├── robots.txt                          # Search engine directives
 ├── favicon.svg                         # Site favicon
+├── og-image.jpg                        # Social sharing image (1280x720)
 └── logos/                              # Client logo assets</code></pre>
 <hr />
 <h2 id="support-contact">Support Contact</h2>
 <p><strong>Brannium</strong> design@brannium.com</p>
 <hr />
 <p><em>Document generated: February 2026</em></p>
+<hr />
+<p><em>Vibed in <a href="https://wippli.ai">Wippli</a>® by <a
+href="https://brannium.com">Brannium</a></em></p>
 </body>
 </html>

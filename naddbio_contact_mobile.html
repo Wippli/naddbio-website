@@ -168,7 +168,11 @@
         .footer ul { list-style: none; }
         .footer ul li { margin-bottom: 8px; }
         .footer a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 14px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px; }
+        .footer-bottom-left { margin-bottom: 8px; }
+        .footer-bottom-left a { color: rgba(255,255,255,0.7); margin-left: 12px; }
+        .footer-bottom-right { color: rgba(255,255,255,0.6); font-size: 12px; }
+        .footer-bottom-right a { color: rgba(255,255,255,0.6); }
     </style>
 </head>
 <body>
@@ -281,7 +285,7 @@
         <div class="contact-form-wrapper">
             <h3>Send Us a Message</h3>
             <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="81584337-1236-4188-a518-022bab9f9dcd">
+                <input type="hidden" name="access_key" value="adbb7453-2cd1-4ec8-bb56-3094cedf6fb7">
                 <input type="hidden" name="subject" value="New Contact Form Submission - NADDBio Website">
                 <input type="hidden" name="redirect" value="https://www.naddbio.com/naddbio_contact_mobile.html?submitted=true">
                 <input type="hidden" name="from_name" value="NADDBio Website">
@@ -397,7 +401,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved.</p>
+            <div class="footer-bottom-left">
+                <span>&copy; 2026 NADDBio. All rights reserved.</span>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-bottom-right">
+                Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a>
+            </div>
         </div>
     </footer>
 
