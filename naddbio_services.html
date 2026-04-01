@@ -440,6 +440,190 @@
         }
 
         /* ========================================
+           ENGAGEMENT TIERS
+        ======================================== */
+        .tiers-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+            padding-top: calc(var(--header-height) + 40px);
+            background: var(--light-gray);
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .tier-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: var(--gradient-start);
+        }
+
+        .tier-card.flagship:hover {
+            border-color: #c8922a;
+            box-shadow: 0 20px 50px rgba(200,146,42,0.2);
+        }
+
+        .tier-card:hover .tier-header {
+            filter: brightness(1.1);
+        }
+
+        .tier-card:hover .tier-cta .btn {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .tier-card.flagship {
+            border: 2px solid #c8922a;
+        }
+
+        .tier-header {
+            background: var(--dark-text);
+            color: var(--white);
+            padding: 28px 28px 20px;
+            text-align: center;
+        }
+
+        .tier-card.flagship .tier-header {
+            background: linear-gradient(135deg, #c8922a, #d4a43a);
+        }
+
+        .tier-flag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .tier-header h3 {
+            font-family: 'Cormorant', serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .tier-tagline {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.85;
+        }
+
+        .tier-pricing {
+            padding: 20px 28px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tier-card.flagship .tier-pricing {
+            background: #fdf6e8;
+        }
+
+        .tier-price {
+            font-family: 'Cormorant', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .tier-price-sub {
+            font-size: 13px;
+            color: var(--body-text);
+            margin-top: 4px;
+        }
+
+        .tier-body {
+            padding: 24px 28px 28px;
+            flex: 1;
+        }
+
+        .tier-body ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tier-body ul li {
+            padding: 8px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--body-text);
+        }
+
+        .tier-body ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            background: var(--gradient-start);
+            border-radius: 50%;
+        }
+
+        .tier-card.flagship .tier-body ul li::before {
+            background: #c8922a;
+        }
+
+        .tier-cta {
+            padding: 0 28px 28px;
+            text-align: center;
+        }
+
+        .tier-cta .btn {
+            width: 100%;
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .btn-tier-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-tier-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(49,180,74,0.3);
+        }
+
+        .btn-tier-flagship {
+            background: linear-gradient(135deg, #c8922a, #d4a43a);
+            color: white;
+        }
+
+        .btn-tier-flagship:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200,146,42,0.3);
+        }
+
+        /* ========================================
            CTA SECTION
         ======================================== */
         .cta {
@@ -634,6 +818,26 @@
 
             .feature-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tiers-section {
+                padding: 60px 0;
+                padding-top: calc(var(--header-height) + 24px);
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .tier-header h3 {
+                font-size: 22px;
+            }
+
+            .tier-price {
+                font-size: 20px;
             }
 
             .section-header h2 {
@@ -865,7 +1069,82 @@
     </div>
 
     <!-- ==========================================
-         PAGE 5: CTA + FOOTER
+         PAGE 5: ENGAGEMENT TIERS
+    =========================================== -->
+    <div class="page">
+        <div class="page__inner">
+            <section class="tiers-section">
+                <div class="container">
+                    <div class="section-header" data-reveal="up">
+                        <h2>Three Engagement Tiers</h2>
+                        <p>Designed to match every client need and budget cycle</p>
+                    </div>
+                    <div class="tiers-grid">
+                        <div class="tier-card flagship" data-reveal="scale" data-delay="1">
+                            <div class="tier-header">
+                                <div class="tier-flag">Flagship</div>
+                                <h3>NADDBio Embedded</h3>
+                                <div class="tier-tagline">"Your senior physician, on your team, without the overhead."</div>
+                            </div>
+                            <div class="tier-pricing">
+                                <div class="tier-price">Monthly Retainer</div>
+                            </div>
+                            <div class="tier-body">
+                                <ul>
+                                    <li>Fractional CMO / VP Clinical Development / Medical Director</li>
+                                    <li>Monthly retainer · 1–2 days/week · Min. 3–6 month commitment</li>
+                                    <li>Includes: Clinical strategy · Protocol design · FDA meeting prep · Safety governance</li>
+                                </ul>
+                            </div>
+                            <div class="tier-cta">
+                                <a href="naddbio_contact.html" class="btn btn-tier-flagship">Get Started</a>
+                            </div>
+                        </div>
+
+                        <div class="tier-card" data-reveal="scale" data-delay="2">
+                            <div class="tier-header">
+                                <h3>NADDBio Accelerate</h3>
+                                <div class="tier-tagline">"Targeted expertise to unlock your next milestone."</div>
+                            </div>
+                            <div class="tier-pricing">
+                                <div class="tier-price">Project-Based</div>
+                            </div>
+                            <div class="tier-body">
+                                <ul>
+                                    <li>Project-based: IND prep · Due diligence · NDA/BLA support · DSUR/PBRER</li>
+                                    <li>Fixed-fee, value-based pricing</li>
+                                </ul>
+                            </div>
+                            <div class="tier-cta">
+                                <a href="naddbio_contact.html" class="btn btn-tier-primary">Discuss a Project</a>
+                            </div>
+                        </div>
+
+                        <div class="tier-card" data-reveal="scale" data-delay="3">
+                            <div class="tier-header">
+                                <h3>NADDBio On-Call</h3>
+                                <div class="tier-tagline">"Expert guidance exactly when you need it."</div>
+                            </div>
+                            <div class="tier-pricing">
+                                <div class="tier-price">Hourly / Daily</div>
+                            </div>
+                            <div class="tier-body">
+                                <ul>
+                                    <li>Ad-hoc advisory · DMC participation · Medical monitoring overflow</li>
+                                </ul>
+                            </div>
+                            <div class="tier-cta">
+                                <a href="naddbio_contact.html" class="btn btn-tier-primary">Book a Call</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         PAGE 6: CTA + FOOTER
     =========================================== -->
     <div class="page">
         <div class="page__inner">
@@ -874,8 +1153,8 @@
                     <h2 data-reveal="up">Ready to Accelerate Your Program?</h2>
                     <p data-reveal="up" data-delay="1">Partner with NADDBio for expert guidance across clinical development, regulatory strategy, and pharmacovigilance.</p>
                     <div class="cta-buttons">
-                        <a href="mailto:info@naddbio.com" class="btn btn-primary" data-reveal="scale" data-delay="2">Contact Us Today</a>
-                        <a href="https://app.wippli.ai/form/33/66?guest_token=e61c59f5bee946535e7ceac1e832a9294a1b554797b95c615a313336daa23601" target="_blank" class="btn btn-orange" data-reveal="scale" data-delay="3">Free R&D Insights Report</a>
+                        <a href="naddbio_contact.html" class="btn btn-primary" data-reveal="scale" data-delay="2">Contact Us</a>
+                        <a href="tel:+16174078015" class="btn btn-outline" data-reveal="scale" data-delay="3">Book a Discovery Call</a>
                     </div>
                 </div>
             </section>

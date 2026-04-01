@@ -264,7 +264,9 @@
     <section class="section alt" id="contact-form">
         <div class="contact-form-wrapper">
             <h3>Send Us a Message</h3>
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/mzdkvdve" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Submission - NADDBio Website">
+                <input type="hidden" name="_next" value="https://www.naddbio.com/naddbio_contact_mobile.html?submitted=true">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName" required>
@@ -381,7 +383,7 @@
         const navLinks = document.querySelector('.nav-links');
         mobileToggle.addEventListener('click', function() { this.classList.toggle('active'); navLinks.classList.toggle('active'); });
         navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileToggle.classList.remove('active'); navLinks.classList.remove('active'); }); });
-        document.getElementById('contactForm').addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! We will get back to you shortly.'); this.reset(); });
+        if (window.location.search.includes('submitted=true')) { document.getElementById('contactForm').innerHTML = '<div style="text-align:center;padding:40px"><h3 style="color:var(--gradient-start)">Thank you! Your message has been sent.</h3></div>'; }
     </script>
 
 </body>
