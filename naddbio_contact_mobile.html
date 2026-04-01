@@ -5,32 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Contact NADDBio - Get in Touch</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Contact NADDBio for biopharmaceutical consulting inquiries. Reach our team in Cambridge, MA for drug development, regulatory, and clinical operations support.">
-    <meta name="keywords" content="contact NADDBio, biopharmaceutical consulting contact, drug development inquiry, Cambridge MA pharmaceutical, consulting inquiry">
-    <meta name="author" content="NADDBio">
-    <link rel="canonical" href="https://www.naddbio.com/contact">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.naddbio.com/contact">
-    <meta property="og:title" content="Contact NADDBio - Get in Touch">
-    <meta property="og:description" content="Reach our team for biopharmaceutical consulting inquiries. Drug development, regulatory, and clinical operations support.">
-    <meta property="og:image" content="https://www.naddbio.com/og-image.png">
-    <meta property="og:site_name" content="NADDBio">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.naddbio.com/contact">
-    <meta name="twitter:title" content="Contact NADDBio - Get in Touch">
-    <meta name="twitter:description" content="Reach our team for biopharmaceutical consulting inquiries. Drug development, regulatory, and clinical operations support.">
-    <meta name="twitter:image" content="https://www.naddbio.com/og-image.png">
-
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact NADDBio for biopharmaceutical consulting services.">
+    <link rel="canonical" href="https://www.naddbio.com/contact">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.naddbio.com/contact">
+    <meta property="og:title" content="Contact NADDBio">
+    <meta property="og:description" content="Get in touch with our team for biopharmaceutical consulting.">
+    <meta property="og:image" content="https://www.naddbio.com/og-image.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,9 +112,6 @@
         .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; font-family: 'Work Sans', sans-serif; font-size: 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: var(--white); color: var(--dark-text); transition: border-color 0.3s; -webkit-appearance: none; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--gradient-start); }
         .form-group textarea { min-height: 100px; resize: vertical; }
-        .consent-group { margin-top: 8px; }
-        .consent-label { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--body-text); cursor: pointer; line-height: 1.4; }
-        .consent-label input[type="checkbox"] { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--gradient-start); cursor: pointer; flex-shrink: 0; }
         .submit-btn { width: 100%; padding: 16px; background: var(--gradient); color: white; border: none; border-radius: 8px; font-family: 'Work Sans', sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; min-height: 48px; }
 
         /* Feature Cards */
@@ -168,11 +152,7 @@
         .footer ul { list-style: none; }
         .footer ul li { margin-bottom: 8px; }
         .footer a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px; }
-        .footer-bottom-left { margin-bottom: 8px; }
-        .footer-bottom-left a { color: rgba(255,255,255,0.7); margin-left: 12px; }
-        .footer-bottom-right { color: rgba(255,255,255,0.6); font-size: 12px; }
-        .footer-bottom-right a { color: rgba(255,255,255,0.6); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -284,11 +264,7 @@
     <section class="section alt" id="contact-form">
         <div class="contact-form-wrapper">
             <h3>Send Us a Message</h3>
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="adbb7453-2cd1-4ec8-bb56-3094cedf6fb7">
-                <input type="hidden" name="subject" value="New Contact Form Submission - NADDBio Website">
-                <input type="hidden" name="redirect" value="https://www.naddbio.com/naddbio_contact_mobile.html?submitted=true">
-                <input type="hidden" name="from_name" value="NADDBio Website">
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" id="firstName" name="firstName" required>
@@ -321,12 +297,6 @@
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..."></textarea>
-                </div>
-                <div class="form-group consent-group">
-                    <label class="consent-label">
-                        <input type="checkbox" name="consent" required>
-                        <span>I agree to NADDBio storing my submitted information to respond to my inquiry.</span>
-                    </label>
                 </div>
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
@@ -401,13 +371,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-bottom-left">
-                <span>&copy; 2026 NADDBio. All rights reserved.</span>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-            </div>
-            <div class="footer-bottom-right">
-                Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a>
-            </div>
+            <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved. | <a href="/privacy-policy.html">Privacy</a> | Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a></p>
         </div>
     </footer>
 
@@ -417,11 +381,7 @@
         const navLinks = document.querySelector('.nav-links');
         mobileToggle.addEventListener('click', function() { this.classList.toggle('active'); navLinks.classList.toggle('active'); });
         navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileToggle.classList.remove('active'); navLinks.classList.remove('active'); }); });
-        // Check if form was submitted successfully
-        if (window.location.search.includes('submitted=true')) {
-            alert('Thank you for your message! We will get back to you shortly.');
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
+        document.getElementById('contactForm').addEventListener('submit', function(e) { e.preventDefault(); alert('Thank you for your message! We will get back to you shortly.'); this.reset(); });
     </script>
 
 </body>

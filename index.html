@@ -5,37 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NADDBio - Biopharmaceutical Consulting for R&D Excellence</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="NADDBio provides expert biopharmaceutical consulting for R&D excellence. Drug development, regulatory strategy, clinical operations, and medical affairs solutions.">
-    <meta name="keywords" content="biopharmaceutical consulting, drug development, clinical trials, regulatory strategy, R&D consulting, medical affairs, pharmaceutical consulting">
-    <meta name="author" content="NADDBio">
-    <link rel="canonical" href="https://www.naddbio.com/">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.naddbio.com/">
-    <meta property="og:title" content="NADDBio - Biopharmaceutical Consulting for R&D Excellence">
-    <meta property="og:description" content="Expert biopharmaceutical consulting for drug development, regulatory strategy, and clinical operations.">
-    <meta property="og:image" content="https://www.naddbio.com/og-image.jpg">
-    <meta property="og:image:secure_url" content="https://www.naddbio.com/og-image.jpg">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="720">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:alt" content="NADDBio - Biopharmaceutical Consulting for R&D Excellence">
-    <meta property="og:site_name" content="NADDBio">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.naddbio.com/">
-    <meta name="twitter:title" content="NADDBio - Biopharmaceutical Consulting for R&D Excellence">
-    <meta name="twitter:description" content="Expert biopharmaceutical consulting for drug development, regulatory strategy, and clinical operations.">
-    <meta name="twitter:image" content="https://www.naddbio.com/og-image.jpg">
-
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="NADDBio provides expert biopharmaceutical consulting for R&D excellence. Drug development, regulatory strategy, and clinical operations.">
+    <link rel="canonical" href="https://www.naddbio.com/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NADDBio">
+    <meta property="og:url" content="https://www.naddbio.com/">
+    <meta property="og:title" content="NADDBio - Biopharmaceutical Consulting">
+    <meta property="og:description" content="Expert biopharmaceutical consulting for R&D excellence.">
+    <meta property="og:image" content="https://www.naddbio.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:author" content="NADDBio">
+    <meta property="article:published_time" content="2026-02-01">
 
     <!-- Mobile Device Detection & Redirect -->
     <script>
@@ -342,7 +329,7 @@
         /* Logo Carousel */
         .logo-carousel {
             position: absolute;
-            bottom: 0;
+            bottom: 10px;
             left: 0;
             right: 0;
             background: rgba(255,255,255,0.95);
@@ -448,7 +435,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px 0 120px;
+            padding: 15px 0 120px;
             position: relative;
         }
 
@@ -737,31 +724,8 @@
         .footer-bottom {
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 24px;
+            text-align: center;
             font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .footer-bottom-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .footer-bottom-right {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-bottom-right a {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer-bottom-right a:hover {
-            color: var(--white);
         }
 
         /* ========================================
@@ -1293,12 +1257,12 @@
                         <div class="service-card" data-reveal="scale" data-delay="2">
                             <div class="service-icon">C</div>
                             <h3>Clinical Development</h3>
-                            <p>Accelerate your programs through strategy optimisation that balances scientific rigour with speed-to-market, patient safety with commercial viability, and innovation with regulatory pragmatism.</p>
+                            <p>Accelerate programs through optimisation balancing scientific rigour with speed-to-market, safety with commercial viability, and innovation with pragmatism.</p>
                         </div>
                         <div class="service-card" data-reveal="scale" data-delay="3">
                             <div class="service-icon">P</div>
                             <h3>Pharmacovigilance & Drug Safety</h3>
-                            <p>Build robust frameworks to ensure patient safety, regulatory compliance, risk management, and provide safety intelligence impacting clinical programs, labelling and product viability.</p>
+                            <p>Build frameworks ensuring patient safety, compliance, risk management, and safety intelligence impacting clinical programs and product viability.</p>
                         </div>
                         <div class="service-card" data-reveal="scale" data-delay="4">
                             <div class="service-icon">R</div>
@@ -1443,13 +1407,7 @@
                         </div>
                     </div>
                     <div class="footer-bottom">
-                        <div class="footer-bottom-left">
-                            <span>&copy; 2026 NADDBio. All rights reserved.</span>
-                            <a href="/privacy-policy.html">Privacy Policy</a>
-                        </div>
-                        <div class="footer-bottom-right">
-                            Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a>
-                        </div>
+                        <p>&copy; <span id="current-year"></span> NADDBio. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | Vibed in <a href="https://wippli.ai" target="_blank">Wippli</a> by <a href="https://brannium.com" target="_blank">Brannium</a></p>
                     </div>
                 </div>
             </footer>
@@ -1529,75 +1487,22 @@
     </script>
 
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none;">
-        <div class="cookie-content">
-            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="/privacy-policy.html">Learn more</a></p>
-            <button id="cookie-accept" class="cookie-btn">Accept</button>
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(26, 26, 46, 0.9); color: white; padding: 11px 24px; z-index: 9999; box-shadow: 0 -2px 10px rgba(0,0,0,0.2);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <p style="margin: 0; font-size: 14px; flex: 1;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="/privacy-policy.html" style="color: #8abe40;">Learn more</a></p>
+            <button onclick="acceptCookies()" style="background: linear-gradient(135deg, #31b44a, #8abe40); color: white; border: none; padding: 7px 24px; border-radius: 4px; cursor: pointer; font-weight: 500;">Accept</button>
         </div>
     </div>
-    <style>
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--dark-text, #1a1a2e);
-            color: #fff;
-            padding: 16px 24px;
-            z-index: 9999;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        }
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .cookie-content p {
-            margin: 0;
-            font-size: 14px;
-            color: rgba(255,255,255,0.9);
-        }
-        .cookie-content a {
-            color: #8abe40;
-            text-decoration: underline;
-        }
-        .cookie-btn {
-            background: linear-gradient(135deg, #31b44a, #8abe40);
-            color: #fff;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: opacity 0.3s;
-        }
-        .cookie-btn:hover {
-            opacity: 0.9;
-        }
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
     <script>
         (function() {
-            var banner = document.getElementById('cookie-banner');
-            var acceptBtn = document.getElementById('cookie-accept');
-            if (!localStorage.getItem('cookieConsent')) {
-                banner.style.display = 'block';
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
             }
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'true');
-                banner.style.display = 'none';
-            });
         })();
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
     </script>
 
 </body>
